@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack -w",
     "start": "nodemon ./server/index.js",
-    "seed": "mysql -u root -p < schema.sql"
+    "seed": "mysql -u root < schema.sql"
   },
   "keywords": [],
   "author": "",
