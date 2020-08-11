@@ -1,13 +1,15 @@
 {
   "name": "rec-adidas-reviews",
   "version": "1.0.0",
-  "description": "",
+  "description": "> Project description",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack -w",
     "start": "nodemon ./server/index.js",
-    "seed": "mysql -u root < schema.sql"
+    "seed": "mysql -u root < schema.sql",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,12 @@
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^23.4.2",
     "babel-loader": "^8.0.6",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
@@ -35,5 +43,13 @@
       "@babel/env",
       "@babel/react"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/All-Day-I-Dream-About-Schemas/Review.git"
+  },
+  "bugs": {
+    "url": "https://github.com/All-Day-I-Dream-About-Schemas/Review/issues"
+  },
+  "homepage": "https://github.com/All-Day-I-Dream-About-Schemas/Review#readme"
 }
