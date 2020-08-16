@@ -19,6 +19,8 @@ for (let i = 0; i < 100; i++) {
   data.push(faker.lorem.sentences());
   data.push(faker.internet.userName());
   data.push(JSON.stringify(faker.date.past()).substring(1, 11));
+  data.push(Math.floor(Math.random() * 100));
+  data.push(Math.floor(Math.random() * 20));
   fakeData.push(data);
 }
 
