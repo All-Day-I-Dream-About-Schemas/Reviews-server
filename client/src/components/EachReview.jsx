@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Wrapper from '../styled-components/EachReview-style.jsx';
 
 class EachReview extends Component {
   constructor(props) {
@@ -17,17 +18,29 @@ class EachReview extends Component {
   render() {
     // console.log(this.props.review)
     return (
-      <div>
-        <div>{this.props.review.rating}</div>
-        <div>{this.props.review.date.slice(0, 10)}</div>
-        <div>{this.props.review.opinion}</div>
-        <div>{this.props.review.review}</div>
+      <Wrapper.review>
+        <div>
+          <Wrapper.star>{this.props.review.rating}</Wrapper.star>
+          <Wrapper.date>{this.props.review.date.slice(0, 10)}</Wrapper.date>
+        </div>
+        <div>
+          <div>{this.props.review.opinion}</div>
+          <div>{this.props.review.review}</div>
+        </div>
         <div>{this.props.review.recommend}</div>
         <div>{this.props.review.nickname}</div>
-        <div>Was this review helpful?</div>
-        <button onClick={this.clickHandler} name='helpfulYes'>Yes</button>{this.props.review.helpfulYes}
-        <button onClick={this.clickHandler} name='helpfulNo'>No</button>{this.props.review.helpfulNo}
-      </div>
+        <Wrapper.helpful>
+          <span>Was this review helpful?</span>
+          <span>
+            <button onClick={this.clickHandler} name='helpfulYes'>Yes</button>
+            {this.props.review.helpfulYes}
+          </span>
+          <span>
+            <button onClick={this.clickHandler} name='helpfulNo'>No</button>
+            {this.props.review.helpfulNo}
+          </span>
+        </Wrapper.helpful>
+      </Wrapper.review>
     )
   }
 }

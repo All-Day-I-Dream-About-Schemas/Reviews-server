@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import EachReview from './EachReview.jsx';
-
+import Wrapper from '../styled-components/Reviews-style.jsx';
 class Reviews extends Component {
   constructor(props) {
     super(props);
@@ -28,16 +28,22 @@ class Reviews extends Component {
   render() {
     return (
       <div>
-        <button name='date' onClick={this.sortButton}>NEWEST</button>
-        <button name='helpfulYes' onClick={this.sortButton}>HELPFUL</button>
-        <button name='opinion' onClick={this.sortButton}>RELAVANT</button>
-        {
-          this.props.currReviews.map((review, key) => (
-            <EachReview helpfulHandler={this.props.helpfulHandler} review={review} key={key}/>
-          ))
-        }
-        <button onClick={this.loadMore}>LOAD MORE</button>
-        <button onClick={this.writeReview}>WRITE A REVIEW</button>
+        <Wrapper.sort>
+          <button name='date' onClick={this.sortButton}>NEWEST</button>
+          <button name='helpfulYes' onClick={this.sortButton}>HELPFUL</button>
+          <button name='opinion' onClick={this.sortButton}>RELAVANT</button>
+        </Wrapper.sort>
+        <Wrapper.reviews>
+          {
+            this.props.currReviews.map((review, key) => (
+              <EachReview helpfulHandler={this.props.helpfulHandler} review={review} key={key}/>
+            ))
+          }
+        </Wrapper.reviews>
+        <Wrapper.bottomButtons>
+          <button onClick={this.loadMore}>LOAD MORE</button>
+          <button onClick={this.writeReview}>WRITE A REVIEW</button>
+        </Wrapper.bottomButtons>
       </div>
     )
   }

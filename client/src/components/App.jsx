@@ -3,6 +3,7 @@ import RatingBreakdown from './RatingBreakDown.jsx';
 import Ratings from './Ratings.jsx';
 import Reviews from './Reviews.jsx';
 import $ from 'jquery';
+import Wrapper from '../styled-components/App-style.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -176,18 +177,22 @@ class App extends Component {
   render() {
     // console.log(this.state.allReviews);
     return (
-      <div>
-        <h5>Ratings and Reviews</h5>
-        <div>
-          {this.state.allReviews.length > 0 ? <RatingBreakdown allReviews={this.state.allReviews} hideStarHandler={this.hideStarHandler} starClickHandler={this.starClickHandler}/> : null}
-        </div>
-        <div>
-          {this.state.allReviews.length > 0 ? <Ratings allReviews={this.state.allReviews}/> : null}
-        </div>
-        <div>
+      <Wrapper.main>
+        <Wrapper.title>
+          <h4>Ratings &amp; Reviews</h4>
+        </Wrapper.title>
+        <Wrapper.left>
+          <div>
+            {this.state.allReviews.length > 0 ? <RatingBreakdown allReviews={this.state.allReviews} hideStarHandler={this.hideStarHandler} starClickHandler={this.starClickHandler}/> : null}
+          </div>
+          <div>
+            {this.state.allReviews.length > 0 ? <Ratings allReviews={this.state.allReviews}/> : null}
+          </div>
+        </Wrapper.left>
+        <Wrapper.right>
           {this.state.allReviews.length > 0 ? <Reviews sortBy={this.sortByHandler} loadMoreHandler={this.loadMoreHandler} currReviews={this.state.currReviews} helpfulHandler={this.helpfulHandler}/> : null}
-        </div>
-      </div>
+        </Wrapper.right>
+      </Wrapper.main>
     );
   }
 }
