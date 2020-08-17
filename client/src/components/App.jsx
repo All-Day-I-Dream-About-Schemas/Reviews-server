@@ -179,7 +179,7 @@ class App extends Component {
     return (
       <Wrapper.main>
         <Wrapper.title>
-          <h4>Ratings and Reviews</h4>
+          <h4>Ratings &amp; Reviews</h4>
         </Wrapper.title>
         <Wrapper.left>
           <div>
