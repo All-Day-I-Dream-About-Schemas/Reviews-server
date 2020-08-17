@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Wrapper from '../styled-components/Ratings-style.jsx';
 
 const Ratings = (props) => {
   let totalRecommend = 0, totalSize = 0, totalWidth = 0, totalComfort = 0, totalQuality = 0;
@@ -18,8 +19,8 @@ const Ratings = (props) => {
   const comfort = Math.round(totalComfort / props.allReviews.length * 100) / 100;
   const quality = Math.round(totalQuality / props.allReviews.length * 100) / 100;
   return (
-  <div>
-    <h4>{recommendPercentage}%</h4>
+  <Wrapper.ratings>
+    <h5>{recommendPercentage}%</h5>
     <div>of customers recommend this product</div>
     <div>
       <div>SIZE</div>
@@ -52,7 +53,7 @@ const Ratings = (props) => {
       <div>POOR</div>
       <div>PERFECT</div>
     </div>
-  </div>
+  </Wrapper.ratings>
   )
 }
 export default Ratings;

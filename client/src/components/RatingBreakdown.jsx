@@ -81,17 +81,15 @@ class RatingBreakdown extends Component {
     // console.log(this.state.button1);
     return (
       <div>
-        <div>
-          <Wrapper.Wrapper>
-            <div>{this.state.avgRatings}</div>
-            <div>show ratings in stars</div>
-            <div>{this.props.allReviews.length} Reviews</div>
-          </Wrapper.Wrapper>
-        </div>
-        <div>
-          <div>
+        <Wrapper.greenBox>
+          <div>{this.state.avgRatings}</div>
+          <div>show ratings in stars</div>
+          <div>{this.props.allReviews.length} Reviews</div>
+        </Wrapper.greenBox>
+        <Wrapper.breakdown>
+          <h5>
             Rating Breakdown
-          </div>
+          </h5>
             {this.state.ButtonClicked ? <div> Showing reviews: </div> : null}
             {this.state.button5 ? <button name="button5" onClick={this.hideButtonClick}>5 STARS</button> : null}
             {this.state.button4 ? <button name="button4" onClick={this.hideButtonClick}>4 STARS</button> : null}
@@ -99,8 +97,15 @@ class RatingBreakdown extends Component {
             {this.state.button2 ? <button name="button2" onClick={this.hideButtonClick}>2 STARS</button> : null}
             {this.state.button1 ? <button name="button1" onClick={this.hideButtonClick}>1 STARS</button> : null}
           <div>
-            <button name="button5" onClick={this.showButtonClick}>5 STARS</button>
-            <div>bar {this.state.fiveStar}</div>
+            <span>
+              <button name="button5" onClick={this.showButtonClick}>5 STARS</button>
+              <div>
+                <Wrapper.greyBar>
+
+                </Wrapper.greyBar>
+                {this.state.fiveStar}
+              </div>
+            </span>
           </div>
           <div>
             <button name="button4" onClick={this.showButtonClick}>4 STARS</button>
@@ -118,7 +123,7 @@ class RatingBreakdown extends Component {
             <button name="button1" onClick={this.showButtonClick}>1 STARS</button>
             <div>bar {this.state.oneStar}</div>
           </div>
-        </div>
+        </Wrapper.breakdown>
       </div>
     )
   }
