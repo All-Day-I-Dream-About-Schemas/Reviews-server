@@ -11,6 +11,10 @@ const sort = styled.div`
     color: #ccc;
     border: 1px solid #555;
     border-right: none;
+    cursor: pointer;
+  }
+  button:hover {
+    color: black;
   }
   button:last-child {
     border-right: 1px solid #555;
@@ -25,6 +29,7 @@ const bottomButtons = styled.div`
   padding-top: 40px;
   box-sizing: border-box;
   button {
+    cursor: pointer;
     width: 49%;
     margin-right: 2%;
     height: 48px;
@@ -38,6 +43,9 @@ const bottomButtons = styled.div`
     background-color: black;
     color: #fff;
     margin-right: 0%;
+  }
+  button:hover {
+    color: grey;
   }
 `;
 

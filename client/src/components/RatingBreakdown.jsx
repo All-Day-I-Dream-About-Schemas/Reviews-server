@@ -82,47 +82,77 @@ class RatingBreakdown extends Component {
     return (
       <div>
         <Wrapper.greenBox>
-          <div>{this.state.avgRatings}</div>
-          <div>show ratings in stars</div>
-          <div>{this.props.allReviews.length} Reviews</div>
+          <Wrapper.overallRate>{this.state.avgRatings.toString().slice(0, 3)}</Wrapper.overallRate>
+          <div>
+            <Wrapper.stars>show ratings in stars</Wrapper.stars>
+            <Wrapper.totalReviews>{this.props.allReviews.length} Reviews</Wrapper.totalReviews>
+          </div>
         </Wrapper.greenBox>
         <Wrapper.breakdown>
-          <h5>
+          <Wrapper.ratingBreakdown>
             Rating Breakdown
-          </h5>
-            {this.state.ButtonClicked ? <div> Showing reviews: </div> : null}
+          </Wrapper.ratingBreakdown>
+            {this.state.ButtonClicked ? <div className="showing_reviews"> Showing reviews: </div> : null}
             {this.state.button5 ? <button name="button5" onClick={this.hideButtonClick}>5 STARS</button> : null}
             {this.state.button4 ? <button name="button4" onClick={this.hideButtonClick}>4 STARS</button> : null}
             {this.state.button3 ? <button name="button3" onClick={this.hideButtonClick}>3 STARS</button> : null}
             {this.state.button2 ? <button name="button2" onClick={this.hideButtonClick}>2 STARS</button> : null}
             {this.state.button1 ? <button name="button1" onClick={this.hideButtonClick}>1 STARS</button> : null}
-          <div>
+          <Wrapper.buttons>
             <span>
               <button name="button5" onClick={this.showButtonClick}>5 STARS</button>
-              <div>
+              <span className="barBox">
                 <Wrapper.greyBar>
-
+                  <span></span>
                 </Wrapper.greyBar>
-                {this.state.fiveStar}
-              </div>
+                <i>{this.state.fiveStar}</i>
+              </span>
             </span>
-          </div>
-          <div>
-            <button name="button4" onClick={this.showButtonClick}>4 STARS</button>
-            <div>bar {this.state.fourStar}</div>
-          </div>
-          <div>
-            <button name="button3" onClick={this.showButtonClick}>3 STARS</button>
-            <div>bar {this.state.threeStar}</div>
-          </div>
-          <div>
-            <button name="button2" onClick={this.showButtonClick}>2 STARS</button>
-            <div>bar {this.state.twoStar}</div>
-          </div>
-          <div>
-            <button name="button1" onClick={this.showButtonClick}>1 STARS</button>
-            <div>bar {this.state.oneStar}</div>
-          </div>
+          </Wrapper.buttons>
+          <Wrapper.buttons>
+            <span>
+              <button name="button4" onClick={this.showButtonClick}>4 STARS</button>
+              <span className="barBox">
+                <Wrapper.greyBar>
+                  <span></span>
+                </Wrapper.greyBar>
+                <i>{this.state.fourStar}</i>
+              </span>
+            </span>
+          </Wrapper.buttons>
+          <Wrapper.buttons>
+            <span>
+              <button name="button3" onClick={this.showButtonClick}>3 STARS</button>
+              <span className="barBox">
+                <Wrapper.greyBar>
+                  <span></span>
+                </Wrapper.greyBar>
+                <i>{this.state.threeStar}</i>
+              </span>
+            </span>
+          </Wrapper.buttons>
+          <Wrapper.buttons>
+            <span>
+              <button name="button2" onClick={this.showButtonClick}>2 STARS</button>
+              <span className="barBox">
+                <Wrapper.greyBar>
+                  <span></span>
+                </Wrapper.greyBar>
+                <i>{this.state.twoStar}</i>
+              </span>
+            </span>
+          </Wrapper.buttons>
+          <Wrapper.buttons>
+            <span>
+              <button name="button1" onClick={this.showButtonClick}>1 STARS</button>
+              <span className="barBox">
+                <Wrapper.greyBar>
+                  <span></span>
+                </Wrapper.greyBar>
+                <i>{this.state.oneStar}</i>
+              </span>
+            </span>
+          </Wrapper.buttons>
         </Wrapper.breakdown>
       </div>
     )
