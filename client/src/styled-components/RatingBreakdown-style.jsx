@@ -13,32 +13,102 @@ const greenBox = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #2ada71;
-  outline: 2px purple solid;
 `;
 
-const breakdown = styled.div`
-  outline: 2px purple solid;
-  h5 {
-    margin: 0;
+const overallRate = styled.div`
+  font-size: 56px;
+  font-weight: bold;
+  padding: 0 15px 0 0;
+`;
+
+const stars = styled.div`
+  font-size: 16px;
+`;
+
+const showing = styled.div`
+  display: inline;
+`;
+
+const totalReviews = styled.div`
+  font-size: 16px;
+  margin: 8px 0 0 0;
+`;
+
+const ratingBreakdown = styled.div`
+  padding: 15px 0 20px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+`;
+
+const buttons = styled.div`
+  box-sizing: border-box;
+  padding-top: 10px;
+  .barBox {
+    display: inline-block;
+    width: 77%;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  button {
+    width: 21%;
   }
 `;
 
-const greyBar = styled.div`
-  flex-grow: 1;
-  margin: 0 10px;
-  background-color: #767677;
-  border-radius: 2px;
+const breakdown = styled.div`
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  .showing_reviews {
+    display: inline;
+  }
+  button {
+    border: none;
+    background-color: white;
+    margin: 0 3px 0 0;
+    padding: 3px 0;
+    box-sizing: border-box;
+    text-decoration: underline;
+  }
+  button:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+  i {
+    display: inline-block;
+    font-style: normal;
+    font-size: 11px;
+    width: 10%;
+    text-align: right;
+  }
 `;
 
-const greenBar = styled.div`
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2ada71;
+const greyBar = styled.span`
+  position: relative;
+  display: inline-block;
+  height: 5px;
+  width: 90%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #767677;
+
+  span {
+    position: absolute;
+    top: 0;
+    width: 86%;
+    height: 100%;
+    background: #2ada71;
+    display: inline-block;
+  }
 `;
 
 export default {
   greenBox: greenBox,
   breakdown: breakdown,
   greyBar: greyBar,
-  greenBar: greenBar,
+  overallRate: overallRate,
+  stars: stars,
+  totalReviews: totalReviews,
+  ratingBreakdown: ratingBreakdown,
+  showing: showing,
+  buttons: buttons,
 };

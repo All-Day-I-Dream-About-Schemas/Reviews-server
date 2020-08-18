@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const review = styled.div`
+const wrapper = styled.div`
   border-bottom: 2px solid #777;
   padding: 50px 0;
 `;
@@ -15,9 +15,29 @@ const date = styled.div`
   display: inline-block;
   width: 50%;
   text-align: right;
+  color: #767677;
+`;
+
+const opinion = styled.div`
+  font-size: 20px;
+  margin: 20px 0 0;
+  font-weight: bold;
+`;
+
+const review = styled.div`
+  margin: 10px 0 0;
+`;
+
+const recommend = styled.div`
+  margin: 20px 0 14px;
+`;
+
+const nickname = styled.div`
+  margin: 10px 0 14px;
 `;
 
 const helpful = styled.div`
+  margin: 20px 0 0 0;
   span {
     margin-right: 15px;
   }
@@ -39,8 +59,12 @@ const helpful = styled.div`
 `;
 
 export default {
-  review: review,
+  wrapper: wrapper,
   star: star,
   date: date,
   helpful: helpful,
+  opinion: opinion,
+  review: review,
+  recommend: recommend,
+  nickname: nickname,
 };

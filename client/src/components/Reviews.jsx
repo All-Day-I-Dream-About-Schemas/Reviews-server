@@ -41,8 +41,8 @@ class Reviews extends Component {
           }
         </Wrapper.reviews>
         <Wrapper.bottomButtons>
-          <button onClick={this.loadMore}>LOAD MORE</button>
-          <button onClick={this.writeReview}>WRITE A REVIEW</button>
+          <button onClick={this.loadMore}>&nbsp;&nbsp;&nbsp;&nbsp;LOAD MORE</button>
+          <button onClick={this.writeReview}>&nbsp;&nbsp;&nbsp;&nbsp;WRITE A REVIEW</button>
         </Wrapper.bottomButtons>
       </div>
     )

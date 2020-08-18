@@ -2,10 +2,10 @@ var faker = require('faker');
 
 const fakeData = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 150; i++) {
   const data = [];
   data.push(Math.floor(Math.random() * 5) + 1);
-  let boolean = Math.floor(Math.random());
+  let boolean = Math.random();
   if (boolean < 0.5) {
     data.push(true);
   } else {

@@ -20,39 +20,68 @@ const Ratings = (props) => {
   const quality = Math.round(totalQuality / props.allReviews.length * 100) / 100;
   return (
   <Wrapper.ratings>
-    <h5>{recommendPercentage}%</h5>
-    <div>of customers recommend this product</div>
-    <div>
+    <Wrapper.percent>
+      <h5>{recommendPercentage}%</h5>
+      <div>of customers recommend this product</div>
+    </Wrapper.percent>
+    <Wrapper.eachRate>
       <div>SIZE</div>
-      <div>four bars</div>
-      <div>mark {size}</div>
-      <div>TOO SMALL</div>
-      <div>PERFECT</div>
-      <div>TOO LARGE</div>
-    </div>
-    <div>
+      <span className="fourBars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <img src="./triangle.png" alt="pointer" width="20" height="25" />
+      </span>
+      <span className="three">
+        <b>TOO SMALL</b>
+        <b>PERFECT</b>
+        <b>TOO LARGE</b>
+      </span>
+    </Wrapper.eachRate>
+    <Wrapper.eachRate>
       <div>WIDTH</div>
-      <div>four bars</div>
-      <div>mark {width}</div>
-      <div>TOO NARROW</div>
-      <div>PERFECT</div>
-      <div>TOO WIDE</div>
-    </div>
-    <div>
+      <span className="fourBars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <img src="./triangle.png" alt="pointer" width="20" height="25" />
+      </span>
+      <span className="three">
+        <b>TOO NARROW</b>
+        <b>PERFECT</b>
+        <b>TOO WIDE</b>
+      </span>
+    </Wrapper.eachRate>
+    <Wrapper.eachRate>
       <div>COMFORT</div>
-      <div>four bars</div>
-      <div>mark {comfort}</div>
-      <div>TOO SMALL</div>
-      <div>UNCOMFORTABLE</div>
-      <div>COMFORTABLE</div>
-    </div>
-    <div>
+      <span className="fourBars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <img src="./triangle.png" alt="pointer" width="20" height="25" />
+      </span>
+      <span className="two">
+        <b>UNCOMFORTABLE</b>
+        <b>COMFORTABLE</b>
+      </span>
+    </Wrapper.eachRate>
+    <Wrapper.eachRate>
       <div>QUALITY</div>
-      <div>four bars</div>
-      <div>mark {quality}</div>
-      <div>POOR</div>
-      <div>PERFECT</div>
-    </div>
+      <span className="fourBars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <img src="./triangle.png" alt="pointer" width="20" height="25" />
+      </span>
+      <span className="two">
+        <b>POOR</b>
+        <b>PERFECT</b>
+      </span>
+    </Wrapper.eachRate>
   </Wrapper.ratings>
   )
 }
