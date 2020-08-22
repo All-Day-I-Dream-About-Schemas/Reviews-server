@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RatingBreakdown from './RatingBreakDown.jsx';
+import RatingBreakdown from './RatingBreakdown.jsx';
 import Ratings from './Ratings.jsx';
 import Reviews from './Reviews.jsx';
 import $ from 'jquery';
