@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Wrapper from '../styled-components/RatingBreakdown-style.jsx';
+import Star from './Star.jsx';
+import BlankStar from './BlankStar.jsx';
 
 class RatingBreakdown extends Component {
   constructor(props) {
@@ -78,13 +80,25 @@ class RatingBreakdown extends Component {
   }
 
   render() {
+    const five = Math.floor(this.state.fiveStar / this.state.numReviews * 100);
+    const four = Math.floor(this.state.fourStar / this.state.numReviews * 100);
+    const three = Math.floor(this.state.threeStar / this.state.numReviews * 100);
+    const two = Math.floor(this.state.twoStar / this.state.numReviews * 100);
+    const one = Math.floor(this.state.oneStar / this.state.numReviews * 100);
+
     // console.log(this.state.button1);
     return (
       <div>
         <Wrapper.greenBox>
           <Wrapper.overallRate>{this.state.avgRatings.toString().slice(0, 3)}</Wrapper.overallRate>
           <div>
-            <Wrapper.stars>show ratings in stars</Wrapper.stars>
+            <span>
+              <Star />
+              <Star />
+              <Star />
+              <BlankStar />
+              <BlankStar />
+            </span>
             <Wrapper.totalReviews>{this.props.allReviews.length} Reviews</Wrapper.totalReviews>
           </div>
         </Wrapper.greenBox>
@@ -102,7 +116,7 @@ class RatingBreakdown extends Component {
             <span>
               <button name="button5" onClick={this.showButtonClick}>5 STARS</button>
               <span className="barBox">
-                <Wrapper.greyBar>
+                <Wrapper.greyBar greenBar={five}>
                   <span></span>
                 </Wrapper.greyBar>
                 <i>{this.state.fiveStar}</i>
@@ -113,7 +127,7 @@ class RatingBreakdown extends Component {
             <span>
               <button name="button4" onClick={this.showButtonClick}>4 STARS</button>
               <span className="barBox">
-                <Wrapper.greyBar>
+                <Wrapper.greyBar greenBar={four}>
                   <span></span>
                 </Wrapper.greyBar>
                 <i>{this.state.fourStar}</i>
@@ -124,7 +138,7 @@ class RatingBreakdown extends Component {
             <span>
               <button name="button3" onClick={this.showButtonClick}>3 STARS</button>
               <span className="barBox">
-                <Wrapper.greyBar>
+                <Wrapper.greyBar greenBar={three}>
                   <span></span>
                 </Wrapper.greyBar>
                 <i>{this.state.threeStar}</i>
@@ -135,7 +149,7 @@ class RatingBreakdown extends Component {
             <span>
               <button name="button2" onClick={this.showButtonClick}>2 STARS</button>
               <span className="barBox">
-                <Wrapper.greyBar>
+                <Wrapper.greyBar greenBar={two}>
                   <span></span>
                 </Wrapper.greyBar>
                 <i>{this.state.twoStar}</i>
@@ -146,7 +160,7 @@ class RatingBreakdown extends Component {
             <span>
               <button name="button1" onClick={this.showButtonClick}>1 STARS</button>
               <span className="barBox">
-                <Wrapper.greyBar>
+                <Wrapper.greyBar greenBar={one}>
                   <span></span>
                 </Wrapper.greyBar>
                 <i>{this.state.oneStar}</i>

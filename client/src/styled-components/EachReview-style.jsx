@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const wrapper = styled.div`
   border-bottom: 2px solid #777;
   padding: 50px 0;
+  font-family: serif;
 `;
 
 const star = styled.div`
@@ -19,9 +20,10 @@ const date = styled.div`
 `;
 
 const opinion = styled.div`
-  font-size: 20px;
+  font-size: 22px;
   margin: 20px 0 0;
   font-weight: bold;
+  font-family: sans-serif;
 `;
 
 const review = styled.div`
@@ -34,6 +36,8 @@ const recommend = styled.div`
 
 const nickname = styled.div`
   margin: 10px 0 14px;
+  font-family: sans-serif;
+  font-weight: bold;
 `;
 
 const helpful = styled.div`

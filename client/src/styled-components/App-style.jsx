@@ -6,6 +6,7 @@ const main = styled.section`
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
+  font: small-caption;
 `;
 
 const title = styled.div`
