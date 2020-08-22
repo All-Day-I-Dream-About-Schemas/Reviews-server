@@ -94,7 +94,7 @@ const greyBar = styled.span`
   span {
     position: absolute;
     top: 0;
-    width: 86%;
+    width: ${props => props.greenBar}%;
     height: 100%;
     background: #2ada71;
     display: inline-block;

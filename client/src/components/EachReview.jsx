@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Wrapper from '../styled-components/EachReview-style.jsx';
 import moment from 'moment'
+import Star from './Star.jsx';
+import BlankStar from './BlankStar.jsx';
 
 class EachReview extends Component {
   constructor(props) {
@@ -21,7 +23,13 @@ class EachReview extends Component {
     return (
       <Wrapper.wrapper>
         <div>
-          <Wrapper.star>{this.props.review.rating}</Wrapper.star>
+          {
+            this.props.review.rating === 5 ? <span><Star/><Star/><Star/><Star/><Star/> </span>:
+            this.props.review.rating === 4 ? <span><Star/><Star/><Star/><Star/><BlankStar/></span> :
+            this.props.review.rating === 3 ? <span><Star/><Star/><Star/><BlankStar/><BlankStar/></span> :
+            this.props.review.rating === 2 ? <span><Star/><Star/><BlankStar/><BlankStar/><BlankStar/></span> :
+            <span><Star/><BlankStar/><BlankStar/><BlankStar/><BlankStar/></span>
+          }
           <Wrapper.date>{moment(this.props.review.date).format('LL')}</Wrapper.date>
         </div>
         <div>

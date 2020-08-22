@@ -14,17 +14,17 @@ const Ratings = (props) => {
     totalQuality += props.allReviews[i].quality;
   }
   const recommendPercentage = Math.round(totalRecommend / props.allReviews.length * 100);
-  const size = Math.round(totalSize / props.allReviews.length * 100) / 100;
-  const width = Math.round(totalWidth / props.allReviews.length * 100) / 100;
-  const comfort = Math.round(totalComfort / props.allReviews.length * 100) / 100;
-  const quality = Math.round(totalQuality / props.allReviews.length * 100) / 100;
+  const size = Math.round(totalSize / props.allReviews.length * 10);
+  const width = Math.round(totalWidth / props.allReviews.length * 10);
+  const comfort = Math.round(totalComfort / props.allReviews.length * 10);
+  const quality = Math.round(totalQuality / props.allReviews.length * 10);
   return (
   <Wrapper.ratings>
     <Wrapper.percent>
       <h5>{recommendPercentage}%</h5>
       <div>of customers recommend this product</div>
     </Wrapper.percent>
-    <Wrapper.eachRate>
+    <Wrapper.eachRate pointer={size}>
       <div>SIZE</div>
       <span className="fourBars">
         <span></span>
@@ -39,7 +39,7 @@ const Ratings = (props) => {
         <b>TOO LARGE</b>
       </span>
     </Wrapper.eachRate>
-    <Wrapper.eachRate>
+    <Wrapper.eachRate pointer={width}>
       <div>WIDTH</div>
       <span className="fourBars">
         <span></span>
@@ -54,7 +54,7 @@ const Ratings = (props) => {
         <b>TOO WIDE</b>
       </span>
     </Wrapper.eachRate>
-    <Wrapper.eachRate>
+    <Wrapper.eachRate pointer={comfort}>
       <div>COMFORT</div>
       <span className="fourBars">
         <span></span>
@@ -68,7 +68,7 @@ const Ratings = (props) => {
         <b>COMFORTABLE</b>
       </span>
     </Wrapper.eachRate>
-    <Wrapper.eachRate>
+    <Wrapper.eachRate pointer={quality}>
       <div>QUALITY</div>
       <span className="fourBars">
         <span></span>
@@ -85,4 +85,5 @@ const Ratings = (props) => {
   </Wrapper.ratings>
   )
 }
+
 export default Ratings;

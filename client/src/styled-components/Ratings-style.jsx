@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+
 const ratings = styled.div`
   padding-top: 20px;
   box-sizing: border-box;
@@ -35,7 +37,7 @@ const eachRate = styled.div`
   img {
     position: absolute;
     top: -3px;
-    left: 90%;
+    left: ${props => props.pointer}%;
   }
   b {
     display: inline-block;
@@ -57,7 +59,7 @@ const eachRate = styled.div`
 `;
 
 export default {
-  ratings: ratings,
   percent: percent,
+  ratings: ratings,
   eachRate: eachRate,
 };
