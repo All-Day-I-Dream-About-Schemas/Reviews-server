@@ -31,7 +31,7 @@ const Ratings = (props) => {
         <span></span>
         <span></span>
         <span></span>
-        <img src="./triangle.png" alt="pointer" width="20" height="25" />
+        <img src="https://sidebarservice.s3-us-west-1.amazonaws.com/icons8-triangle-arrow-48.png" alt="pointer" width="20" height="25" />
       </span>
       <span className="three">
         <b>TOO SMALL</b>

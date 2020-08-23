@@ -36,7 +36,7 @@ class EachReview extends Component {
           <Wrapper.opinion>{this.props.review.opinion}</Wrapper.opinion>
           <Wrapper.review>{this.props.review.review}</Wrapper.review>
         </div>
-        {this.props.review.recommend ? <Wrapper.recommend>checkmark I recommend this product</Wrapper.recommend> : null}
+        {this.props.review.recommend ? <Wrapper.recommend>&#10003; I recommend this product</Wrapper.recommend> : null}
         <Wrapper.nickname>{this.props.review.nickname}</Wrapper.nickname>
         <Wrapper.helpful>
           <span>Was this review helpful?</span>
