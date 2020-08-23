@@ -33,16 +33,16 @@ app.post('/api/helpful', (req, res) => {
   })
 })
 
-const fakeData = require('../fakeData.js');
-app.post('/api/fakeData', (req, res) => {
-  for (let i = 0; i < fakeData.length; i++) {
-    const query = `insert into reviews (rating, recommend, size, width, comfort, quality, opinion, review, nickname, date, helpfulYes, helpfulNo) values (${fakeData[i][0]}, ${fakeData[i][1]}, ${fakeData[i][2]}, ${fakeData[i][3]}, ${fakeData[i][4]}, ${fakeData[i][5]}, '${fakeData[i][6]}', '${fakeData[i][7]}', '${fakeData[i][8]}', '${fakeData[i][9]}', ${fakeData[i][10]}, ${fakeData[i][11]});`;
-    db.query(query, (err, data) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(data);
-      }
-    })
-  }
-})
+// const fakeData = require('../fakeData.js');
+// app.post('/api/fakeData', (req, res) => {
+//   for (let i = 0; i < fakeData.length; i++) {
+//     const query = `insert into reviews (rating, recommend, size, width, comfort, quality, opinion, review, nickname, date, helpfulYes, helpfulNo) values (${fakeData[i][0]}, ${fakeData[i][1]}, ${fakeData[i][2]}, ${fakeData[i][3]}, ${fakeData[i][4]}, ${fakeData[i][5]}, '${fakeData[i][6]}', '${fakeData[i][7]}', '${fakeData[i][8]}', '${fakeData[i][9]}', ${fakeData[i][10]}, ${fakeData[i][11]});`;
+//     db.query(query, (err, data) => {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         console.log(data);
+//       }
+//     })
+//   }
+// })

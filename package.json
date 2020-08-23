@@ -6,7 +6,7 @@
   "scripts": {
     "react-dev": "webpack -w",
     "start": "nodemon ./server/index.js",
-    "seed": "mysql -u root < schema.sql",
+    "seed": "node db/seed.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"
